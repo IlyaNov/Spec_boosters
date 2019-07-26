@@ -23,6 +23,6 @@ def predict(path):
 
     except Exception as e:
             print("Error with getting feature from %s: %s" % (path, str(e)))
-            return None
+            return 0
 
     

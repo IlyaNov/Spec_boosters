@@ -3,7 +3,7 @@ import librosa
 import scipy
 
 def spec_builder(wav):
-    D_1 = librosa.amplitude_to_db(librosa.stft(wav,n_fft=700, hop_length=258),
+    D_1 = librosa.amplitude_to_db(librosa.stft(wav[:66000],n_fft=700, hop_length=258),
                                     amin=0.01,ref=np.mean)
     mel_spec = librosa.feature.melspectrogram(S=D_1,power=1,sr=16000,n_fft=256)
     return mel_spec
